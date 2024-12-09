@@ -1,0 +1,115 @@
+/* Define color variables for easy maintenance */
+:root {
+    --primary-bg-color: #eee9a4; /* Soft light gray */
+    --header-bg-color: #513407; /* Gentle green */
+    --text-color: #d4be17; /* White for text */
+    --link-color:White; /* White for links */
+    --link-hover-color: #ffcc00; /* Gold for hover effect */
+    --footer-bg-color: #513407; /* Darker green for footer */
+    --font-family: 'Georgia', serif; /* Elegant serif font */
+}
+/* styles.css */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Use the web font */
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+}
+.slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+/* Change font for specific elements */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Apply to headings */
+}
+
+p {
+    font-family: 'Arial', sans-serif; /* Apply to paragraphs */
+}
+pre{
+    font-family: 'Arial', sans-serif;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* General body styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg-color);
+}
+
+/* Header styles */
+header {
+    background: var(--header-bg-color);
+    color: var(--text-color);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold; /* Bold links for emphasis */
+}
+
+nav ul li a:hover {
+    color: var(--link-hover-color); /* Gold hover effect */
+}
+
+/* Main content styles */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: var(--footer-bg-color);
+    color: var(--text-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation links on smaller screens */
+        margin: 15px 0; /* Adjust margin for stacked layout */
+    }
+    
+    main {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
